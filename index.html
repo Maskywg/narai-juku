@@ -15,9 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#15100f;
-    --bg-alt:rgba(255,140,60,0.05);
-    --panel:rgba(40,28,22,0.55);
+    --bg:#241c18;
+    --bg-alt:rgba(255,150,70,0.06);
+    --panel:rgba(66,49,38,0.55);
     --line:rgba(232,196,150,0.14);
     --ink:#ece2d6;
     --ink-dim:#c8b8a8;
@@ -44,7 +44,7 @@
       radial-gradient(ellipse 60% 50% at 2% 56%, rgba(212,90,38,0.28), transparent 62%),
       radial-gradient(ellipse 55% 45% at 94% 82%, rgba(207,154,62,0.24), transparent 60%),
       radial-gradient(ellipse 60% 45% at 6% 96%, rgba(92,122,63,0.24), transparent 60%),
-      linear-gradient(180deg, #171211 0%, #15100f 40%, #120d0c 100%);
+      linear-gradient(180deg, #2e2420 0%, #271e1a 40%, #201814 100%);
     background-attachment:fixed;
   }
   h1,h2,h3,h4{
@@ -163,6 +163,20 @@
   }
   .stat-label{font-size:0.82rem; color:var(--ink-faint); margin-top:4px;}
 
+  /* ---------- Map panels ---------- */
+  .map-panel{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px;
+    padding:28px 24px 20px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  }
+  .map-panel svg{width:100%; height:auto; display:block;}
+  .map-caption{color:var(--ink-faint); font-size:0.82rem; margin-top:14px; text-align:center;}
+  .route-map-panel{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px;
+    padding:24px 20px 16px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    margin-bottom:44px;
+  }
+  .route-map-panel svg{width:100%; height:auto; display:block; max-width:420px; margin:0 auto;}
+
   /* ---------- Timeline ---------- */
   .timeline{position:relative; margin-top:10px;}
   .timeline::before{
@@ -270,7 +284,7 @@
 
   /* ---------- Footer ---------- */
   footer{
-    background:#100c0b; padding:60px 0 34px; border-top:1px solid var(--line);
+    background:#1c1512; padding:60px 0 34px; border-top:1px solid var(--line);
   }
   footer .wrap{display:flex; flex-direction:column; gap:18px; align-items:flex-start;}
   footer h3{font-size:1.3rem;}
@@ -351,6 +365,88 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NAKASENDO POSITION MAP ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Geography</div>
+      <h2>奈良井宿在木曾路上的位置</h2>
+      <p>木曾十一宿由南往北一路延伸，奈良井宿正好緊靠中山道最險峻的鳥居峠南側，是翻越峠道前最後一個大型宿場。以下為簡化示意圖，非精確比例。</p>
+    </div>
+    <div class="map-panel">
+      <svg viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="中山道木曾十一宿示意圖，標示奈良井宿與鳥居峠位置">
+        <line x1="40" y1="130" x2="960" y2="130" stroke="rgba(232,196,150,0.32)" stroke-width="2"/>
+        <line x1="178" y1="60" x2="178" y2="130" stroke="rgba(146,168,120,0.55)" stroke-width="1.5" stroke-dasharray="3,4"/>
+        <polygon points="178,32 166,58 190,58" fill="#6b8a4e"/>
+        <text x="178" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#9db97f">鳥居峠 1,197m</text>
+        <text x="178" y="72" text-anchor="middle" font-size="10.5" fill="#9db97f">中山道最險難所</text>
+
+        <g font-family="'Noto Sans TC',sans-serif">
+          <!-- 贄川 -->
+          <circle cx="40" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="40" y1="130" x2="40" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="40" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">贄川</text>
+
+          <!-- 奈良井（現在地） -->
+          <line x1="132" y1="130" x2="132" y2="100" stroke="rgba(192,71,42,0.7)" stroke-width="1.5"/>
+          <circle cx="132" cy="130" r="9" fill="#c0472a" stroke="#ece2d6" stroke-width="2"/>
+          <text x="132" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#ece2d6">奈良井</text>
+          <text x="132" y="155" text-anchor="middle" font-size="10.5" fill="#c0472a" font-weight="700">現在地</text>
+
+          <!-- 藪原 -->
+          <circle cx="224" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="224" y1="130" x2="224" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="224" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">藪原</text>
+
+          <!-- 宮ノ越 -->
+          <circle cx="316" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="316" y1="130" x2="316" y2="100" stroke="rgba(232,196,150,0.4)"/>
+          <text x="316" y="90" text-anchor="middle" font-size="13" fill="#c8b8a8">宮ノ越</text>
+
+          <!-- 福島 -->
+          <circle cx="408" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="408" y1="130" x2="408" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="408" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">福島</text>
+
+          <!-- 上松 -->
+          <circle cx="500" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="500" y1="130" x2="500" y2="100" stroke="rgba(232,196,150,0.4)"/>
+          <text x="500" y="90" text-anchor="middle" font-size="13" fill="#c8b8a8">上松</text>
+
+          <!-- 須原 -->
+          <circle cx="592" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="592" y1="130" x2="592" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="592" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">須原</text>
+
+          <!-- 野尻 -->
+          <circle cx="684" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="684" y1="130" x2="684" y2="100" stroke="rgba(232,196,150,0.4)"/>
+          <text x="684" y="90" text-anchor="middle" font-size="13" fill="#c8b8a8">野尻</text>
+
+          <!-- 三留野 -->
+          <circle cx="776" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="776" y1="130" x2="776" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="776" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">三留野</text>
+
+          <!-- 妻籠 -->
+          <circle cx="868" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="868" y1="130" x2="868" y2="100" stroke="rgba(232,196,150,0.4)"/>
+          <text x="868" y="90" text-anchor="middle" font-size="13" fill="#c8b8a8">妻籠</text>
+
+          <!-- 馬籠 -->
+          <circle cx="960" cy="130" r="5" fill="#cf9a3e"/>
+          <line x1="960" y1="130" x2="960" y2="160" stroke="rgba(232,196,150,0.4)"/>
+          <text x="960" y="178" text-anchor="middle" font-size="13" fill="#c8b8a8">馬籠</text>
+        </g>
+
+        <text x="40" y="215" font-size="12" fill="#8f7d6d">◀ 中山道 京都方面（洗馬・塩尻）</text>
+        <text x="960" y="215" text-anchor="end" font-size="12" fill="#8f7d6d">江戶（東京）方面・中津川 ▶</text>
+      </svg>
+      <p class="map-caption">木曾十一宿（贄川、奈良井、藪原、宮ノ越、福島、上松、須原、野尻、三留野、妻籠、馬籠）由南至北排列，奈良井宿緊鄰鳥居峠南側入口。原創示意圖，非官方測繪地圖。</p>
     </div>
   </div>
 </section>
@@ -532,6 +628,39 @@
     <div class="section-head" style="margin-bottom:32px;">
       <h3 style="font-family:'Noto Serif TC',serif; font-size:1.4rem;">建議路線（步行約 3～4 小時）</h3>
     </div>
+
+    <div class="route-map-panel">
+      <svg viewBox="0 0 300 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="奈良井宿建議步行路線動線圖，共五個停留點">
+        <path d="M150,50 Q95,120 128,175 Q168,235 168,290 Q168,345 135,405 Q100,465 158,565" fill="none" stroke="rgba(232,196,150,0.35)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1,10"/>
+
+        <circle cx="150" cy="50" r="17" fill="rgba(207,154,62,0.16)" stroke="#cf9a3e" stroke-width="2"/>
+        <text x="150" y="55" text-anchor="middle" font-size="15" font-weight="700" fill="#cf9a3e" font-family="'Noto Serif TC',serif">1</text>
+        <text x="180" y="46" font-size="14" font-weight="700" fill="#ece2d6" font-family="'Noto Serif TC',serif">中山道杉並木</text>
+        <text x="180" y="66" font-size="11.5" fill="#8f7d6d">出發點</text>
+
+        <circle cx="128" cy="175" r="17" fill="rgba(207,154,62,0.16)" stroke="#cf9a3e" stroke-width="2"/>
+        <text x="128" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#cf9a3e" font-family="'Noto Serif TC',serif">2</text>
+        <text x="158" y="171" font-size="14" font-weight="700" fill="#ece2d6" font-family="'Noto Serif TC',serif">下町・水場</text>
+        <text x="158" y="191" font-size="11.5" fill="#8f7d6d">拍照重點</text>
+
+        <circle cx="168" cy="290" r="17" fill="rgba(207,154,62,0.16)" stroke="#cf9a3e" stroke-width="2"/>
+        <text x="168" y="295" text-anchor="middle" font-size="15" font-weight="700" fill="#cf9a3e" font-family="'Noto Serif TC',serif">3</text>
+        <text x="198" y="286" font-size="14" font-weight="700" fill="#ece2d6" font-family="'Noto Serif TC',serif">中町・上町</text>
+        <text x="198" y="306" font-size="11.5" fill="#8f7d6d">主逛街段</text>
+
+        <circle cx="135" cy="405" r="17" fill="rgba(207,154,62,0.16)" stroke="#cf9a3e" stroke-width="2"/>
+        <text x="135" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#cf9a3e" font-family="'Noto Serif TC',serif">4</text>
+        <text x="165" y="401" font-size="14" font-weight="700" fill="#ece2d6" font-family="'Noto Serif TC',serif">鎮神社</text>
+        <text x="165" y="421" font-size="11.5" fill="#8f7d6d">京都側折返點</text>
+
+        <circle cx="158" cy="565" r="18" fill="rgba(192,71,42,0.18)" stroke="#c0472a" stroke-width="2.5"/>
+        <text x="158" y="570" text-anchor="middle" font-size="15" font-weight="700" fill="#c0472a" font-family="'Noto Serif TC',serif">5</text>
+        <text x="188" y="561" font-size="14" font-weight="700" fill="#ece2d6" font-family="'Noto Serif TC',serif">木曽の大橋</text>
+        <text x="188" y="581" font-size="11.5" fill="#8f7d6d">終點</text>
+      </svg>
+      <p class="map-caption">五個停留點的建議動線示意圖，實際街道走向請以現場路標為準。</p>
+    </div>
+
     <div class="route">
       <div class="route-step">
         <div class="route-dot">1</div>
