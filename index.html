@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奈良井宿｜中山道木曾路的江戶時代秋色</title>
+<meta name="description" content="奈良井宿完整介紹：中山道木曾十一宿的歷史、出梁造町屋建築、鳥居峠、木曽の大橋、紅葉時期與一日遊攻略。">
+<meta property="og:title" content="奈良井宿｜中山道木曾路的江戶時代秋色">
+<meta property="og:description" content="日本最長的宿場町，「奈良井千軒」的繁華舊夢與滿山紅葉。">
+<meta property="og:image" content="https://maskywg.github.io/narai-juku/images/hero-street.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#171110;
+    --bg-alt:#1f1815;
+    --panel:#221a17;
+    --line:rgba(232,196,150,0.14);
+    --ink:#ece2d6;
+    --ink-dim:#c8b8a8;
+    --ink-faint:#8f7d6d;
+    --primary:#c0472a;
+    --primary-soft:rgba(192,71,42,0.16);
+    --gold:#cf9a3e;
+    --gold-soft:rgba(207,154,62,0.18);
+    --indigo:#2c3b4a;
+    --shadow: 0 20px 50px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Noto Sans TC", sans-serif;
+    line-height:1.85;
+    font-weight:300;
+  }
+  h1,h2,h3,h4{
+    font-family:"Noto Serif TC", serif;
+    font-weight:700;
+    color:var(--ink);
+    letter-spacing:0.02em;
+  }
+  a{color:var(--gold);}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    background:#000;
+    overflow:hidden;
+  }
+  .hero img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:0.78;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,10,9,0.35) 0%, rgba(15,10,9,0.25) 35%, rgba(15,10,9,0.95) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    width:100%;
+    padding:0 24px 7vh;
+    max-width:1080px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:"Noto Serif TC", serif;
+    font-size:0.85rem;
+    letter-spacing:0.35em;
+    color:var(--gold);
+    margin-bottom:22px;
+    text-transform:uppercase;
+  }
+  .hero-eyebrow::before{content:"—"; color:var(--primary);}
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5.2rem);
+    line-height:1.05;
+    margin-bottom:18px;
+    text-shadow:0 6px 30px rgba(0,0,0,0.6);
+  }
+  .hero h1 small{
+    display:block;
+    font-size:0.32em;
+    font-weight:400;
+    color:var(--ink-dim);
+    letter-spacing:0.25em;
+    margin-top:14px;
+  }
+  .hero-desc{
+    max-width:560px;
+    color:var(--ink-dim);
+    font-size:1.05rem;
+    margin-bottom:28px;
+  }
+  .hero-tags{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    border:1px solid var(--line);
+    padding:6px 16px;
+    border-radius:999px;
+    font-size:0.82rem;
+    color:var(--ink-dim);
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(4px);
+  }
+  .scroll-cue{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    z-index:2; color:var(--ink-faint); font-size:0.75rem; letter-spacing:0.2em;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .scroll-cue span{
+    width:1px; height:34px; background:linear-gradient(var(--gold), transparent);
+    animation:scrollpulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse{0%,100%{opacity:0.2;}50%{opacity:1;}}
+
+  /* ---------- Section shell ---------- */
+  section{padding:110px 0;}
+  .section-head{margin-bottom:56px; max-width:640px;}
+  .kicker{
+    font-size:0.8rem; letter-spacing:0.3em; color:var(--primary);
+    font-family:"Noto Serif TC", serif; margin-bottom:14px; text-transform:uppercase;
+  }
+  .section-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:16px;}
+  .section-head p{color:var(--ink-dim); font-size:1.02rem;}
+  .alt{background:var(--bg-alt);}
+
+  /* ---------- Intro strip ---------- */
+  .intro-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .intro-grid p{color:var(--ink-dim); margin-bottom:16px; font-size:1.02rem;}
+  .intro-grid p b{color:var(--ink); font-weight:500;}
+  .stat-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:22px 24px;
+  }
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .stat-num{
+    font-family:"Noto Serif TC",serif; font-size:1.9rem; color:var(--gold); font-weight:700;
+  }
+  .stat-label{font-size:0.82rem; color:var(--ink-faint); margin-top:4px;}
+
+  /* ---------- Timeline ---------- */
+  .timeline{position:relative; margin-top:10px;}
+  .timeline::before{
+    content:""; position:absolute; left:110px; top:6px; bottom:6px; width:1px;
+    background:linear-gradient(var(--primary), var(--gold), transparent);
+  }
+  .t-row{display:grid; grid-template-columns:110px 1fr; gap:30px; position:relative; padding:0 0 40px 0;}
+  .t-row:last-child{padding-bottom:0;}
+  .t-year{
+    font-family:"Noto Serif TC",serif; color:var(--gold); font-weight:700; font-size:1.05rem;
+    text-align:right; padding-top:2px;
+  }
+  .t-body{position:relative; padding-left:28px;}
+  .t-body::before{
+    content:""; position:absolute; left:-5px; top:8px; width:9px; height:9px;
+    border-radius:50%; background:var(--primary); box-shadow:0 0 0 4px var(--bg);
+  }
+  .t-body h4{font-size:1.05rem; margin-bottom:6px; color:var(--ink);}
+  .t-body p{color:var(--ink-dim); font-size:0.96rem;}
+
+  /* ---------- Architecture feature ---------- */
+  .feature{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:0;
+    border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    background:var(--panel);
+  }
+  .feature img{height:100%; object-fit:cover; min-height:340px;}
+  .feature-body{padding:44px 44px;}
+  .feature-body h3{font-size:1.5rem; margin-bottom:16px;}
+  .feature-body p{color:var(--ink-dim); margin-bottom:14px;}
+  .term-list{list-style:none; margin-top:18px;}
+  .term-list li{
+    padding:12px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:110px 1fr; gap:16px;
+  }
+  .term-list li:first-child{border-top:none;}
+  .term-list b{color:var(--gold); font-family:"Noto Serif TC",serif; font-weight:700;}
+  .term-list span{color:var(--ink-dim); font-size:0.95rem;}
+
+  /* ---------- Attractions ---------- */
+  .spot-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .spot{background:var(--panel); padding:32px 30px;}
+  .spot-num{font-family:"Noto Serif TC",serif; color:var(--primary); font-size:0.85rem; letter-spacing:0.1em; margin-bottom:10px;}
+  .spot h4{font-size:1.2rem; margin-bottom:10px;}
+  .spot p{color:var(--ink-dim); font-size:0.95rem;}
+
+  /* ---------- Autumn banner ---------- */
+  .banner{
+    position:relative; min-height:64vh; display:flex; align-items:center; overflow:hidden;
+  }
+  .banner img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .banner::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(90deg, rgba(15,10,9,0.92) 10%, rgba(15,10,9,0.35) 60%, rgba(15,10,9,0.15) 100%);
+  }
+  .banner-content{position:relative; z-index:2; max-width:460px; padding:0 24px; margin:0 auto 0 0;}
+  .banner .wrap{position:relative; z-index:2;}
+  .banner-box{max-width:480px;}
+  .banner-box .kicker{color:var(--gold);}
+  .banner-box h2{font-size:clamp(1.7rem,3.4vw,2.3rem); margin-bottom:16px;}
+  .banner-box p{color:var(--ink-dim);}
+
+  /* ---------- Guide cards ---------- */
+  .guide-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .guide-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:28px 26px;
+  }
+  .guide-card .icon{
+    width:40px; height:40px; border-radius:50%; background:var(--primary-soft); color:var(--primary);
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; margin-bottom:16px;
+  }
+  .guide-card h4{font-size:1.05rem; margin-bottom:10px;}
+  .guide-card p{color:var(--ink-dim); font-size:0.92rem;}
+  .guide-card p+p{margin-top:8px;}
+
+  /* ---------- Route steps ---------- */
+  .route{margin-top:12px;}
+  .route-step{
+    display:grid; grid-template-columns:44px 1fr; gap:20px; padding:20px 0; border-top:1px solid var(--line);
+  }
+  .route-step:first-child{border-top:none;}
+  .route-dot{
+    width:36px; height:36px; border-radius:50%; border:1px solid var(--gold); color:var(--gold);
+    display:flex; align-items:center; justify-content:center; font-family:"Noto Serif TC",serif; font-size:0.9rem;
+  }
+  .route-step h4{font-size:1.02rem; margin-bottom:6px; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;}
+  .route-step h4 .time{font-size:0.78rem; color:var(--ink-faint); font-weight:400; font-family:"Noto Sans TC",sans-serif;}
+  .route-step p{color:var(--ink-dim); font-size:0.92rem;}
+
+  /* ---------- Info table ---------- */
+  .info-table{width:100%; border-collapse:collapse; font-size:0.95rem;}
+  .info-table tr{border-top:1px solid var(--line);}
+  .info-table tr:first-child{border-top:none;}
+  .info-table td{padding:14px 10px; color:var(--ink-dim); vertical-align:top;}
+  .info-table td:first-child{color:var(--gold); width:130px; font-family:"Noto Serif TC",serif; white-space:nowrap;}
+
+  /* ---------- Souvenir chips ---------- */
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;}
+  .chip{
+    background:var(--gold-soft); border:1px solid rgba(207,154,62,0.35); color:var(--gold);
+    padding:8px 18px; border-radius:999px; font-size:0.88rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#100c0b; padding:60px 0 34px; border-top:1px solid var(--line);
+  }
+  footer .wrap{display:flex; flex-direction:column; gap:18px; align-items:flex-start;}
+  footer h3{font-size:1.3rem;}
+  footer p{color:var(--ink-faint); font-size:0.86rem; max-width:520px;}
+  .src-list{list-style:none; margin-top:6px;}
+  .src-list li{color:var(--ink-faint); font-size:0.82rem; margin-bottom:4px;}
+  .src-list a{color:var(--ink-dim);}
+
+  @media (max-width:860px){
+    .intro-grid{grid-template-columns:1fr;}
+    .feature{grid-template-columns:1fr;}
+    .feature img{min-height:240px;}
+    .spot-grid{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:1fr;}
+    .timeline::before{left:70px;}
+    .t-row{grid-template-columns:70px 1fr; gap:16px;}
+    .banner{min-height:52vh;}
+    .banner .wrap{padding:0 24px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <img src="images/hero-street.jpg" alt="奈良井宿主街秋景，兩側木造町屋與滿山紅葉">
+  <div class="hero-content">
+    <div class="hero-eyebrow">中山道・木曾十一宿</div>
+    <h1>奈良井宿
+      <small>NARAI-JUKU — 日本最長的江戶宿場町</small>
+    </h1>
+    <p class="hero-desc">沿奈良井川蜿蜒近一公里的木造老街，出梁造町屋、千本格子窗與屋簷燈籠層層疊疊。每年十月中旬到十一月中旬，滿山楓紅為這座「奈良井千軒」的舊夢，再添一層暖色濾鏡。</p>
+    <div class="hero-tags">
+      <span class="tag">長野縣塩尻市</span>
+      <span class="tag">重要傳統的建造物群保存地區</span>
+      <span class="tag">海拔約 950m</span>
+      <span class="tag">紅葉：10月中旬–11月中旬</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span>SCROLL</div>
+</header>
+
+<!-- ================= INTRO ================= -->
+<section>
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <div class="kicker">Overview</div>
+        <h2 style="margin-bottom:22px;">從江戶到今天，<br>一條沒有斷過的老街</h2>
+        <p>奈良井宿是連接江戶（東京）日本橋與京都三条大橋的五街道之一「中山道」上，第 34 個宿場，也是穿越險峻木曾谷的「木曾十一宿」之一。它座落在中山道全線最高的難所——<b>鳥居峠</b>——腳下，是旅人翻越峠道前後必定投宿補給的據點。</p>
+        <p>正因為守著這個難所，江戶時代的奈良井宿曾異常繁盛，人稱「<b>奈良井千軒</b>」。如今町並沿奈良井川綿延約 1 公里，是<b>日本現存最長的宿場町</b>，2005 年重新測繪確認後也讓它有了這個稱號。走進去，會發現時間感被拉得很長——木造老屋一間接著一間，屋簷下掛著燈籠與布簾，秋天時整條街被染成深淺不一的紅與金。</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-grid">
+          <div>
+            <div class="stat-num">第 34</div>
+            <div class="stat-label">中山道六十九次宿場</div>
+          </div>
+          <div>
+            <div class="stat-num">約 1km</div>
+            <div class="stat-label">町並全長・日本最長</div>
+          </div>
+          <div>
+            <div class="stat-num">409 戶</div>
+            <div class="stat-label">天保 14 年（1843）記錄戶數</div>
+          </div>
+          <div>
+            <div class="stat-num">2,155</div>
+            <div class="stat-label">天保 14 年記錄人口</div>
+          </div>
+          <div>
+            <div class="stat-num">1978</div>
+            <div class="stat-label">指定重要傳統的建造物群保存地區</div>
+          </div>
+          <div>
+            <div class="stat-num">17.6ha</div>
+            <div class="stat-label">保存地區面積</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HISTORY TIMELINE ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">History</div>
+      <h2>奈良井千軒・繁華與保存的兩百年</h2>
+      <p>從江戶初期作為驛站設立，到近代面臨拆除、再到成為文化財保護的範本，奈良井宿的歷史其實是一部「老街如何被留下來」的紀錄。</p>
+    </div>
+    <div class="timeline">
+      <div class="t-row">
+        <div class="t-year">17世紀初</div>
+        <div class="t-body">
+          <h4>中山道整備・宿場設立</h4>
+          <p>德川幕府整頓五街道之際，奈良井被設為中山道第 34 個宿場，隸屬木曾十一宿之一，負責傳遞公文與接待往來大名、商旅。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">江戶中後期</div>
+        <div class="t-body">
+          <h4>鳥居峠帶來的繁榮：「奈良井千軒」</h4>
+          <p>翻越中山道最險峻的鳥居峠之前，旅人多半會在奈良井宿補給、投宿一晚，帶動本陣、脇本陣、旅籠與商家林立，木曾十一宿中以此地最為熱鬧，故有「奈良井千軒」之稱。天保 14 年（1843）記錄顯示町內有本陣 1、脇本陣 1、旅籠 5，戶數 409、人口 2,155。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">明治以降</div>
+        <div class="t-body">
+          <h4>鐵路取代驛道，老街靜靜沉睡</h4>
+          <p>隨著中央本線鐵路開通與公路運輸興起，中山道作為主要幹道的功能逐漸消失，奈良井宿失去了原本的交通樞紐地位，卻也因此避開了大規模的現代化改建，木造町屋原貌被意外保留下來。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1968</div>
+        <div class="t-body">
+          <h4>保存運動的起點</h4>
+          <p>地方居民、學界與行政單位因「中村邸」是否遷移的爭議展開討論，成為官民學合作推動町並保存運動的契機。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1978</div>
+        <div class="t-body">
+          <h4>指定為重要傳統的建造物群保存地區</h4>
+          <p>1978 年 5 月 31 日，奈良井宿（連同鄰近的贄川、木曽平沢地區）獲日本文化廳指定，保存範圍達 17.6 公頃，自此町內修繕與新建都須依循傳統樣式規範。</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-year">1989 / 2005 / 2007</div>
+        <div class="t-body">
+          <h4>三度獲得全國性肯定</h4>
+          <p>1989 年獲「手づくり郷土賞」；2005 年再獲「手づくり郷土大賞」；2007 年入選「美しい日本の歴史的風土百選」，奈良井宿逐漸從地方保存案例變成全國知名的宿場町典範。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARCHITECTURE FEATURE ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Architecture</div>
+      <h2>出梁造與千本格子：老街的立面語言</h2>
+    </div>
+    <div class="feature">
+      <img src="images/lattice-detail.jpg" alt="奈良井宿町屋千本格子窗特寫，掛著中山道奈良井宿燈籠，紅葉垂落屋簷">
+      <div class="feature-body">
+        <p>奈良井宿的町屋幾乎都遵循同一套江戶時期傳承下來的立面工法，走在街上會不斷看到重複出現的細節——這正是它作為「保存地區」最迷人之處：不是單棟古蹟，而是整條街一致的生活場景。</p>
+        <ul class="term-list">
+          <li><b>出梁造</b><span>二樓樓板向外懸挑出一樓牆面之外，既擴大室內空間，也讓屋簷更深，遮陽擋雪。是木曾谷宿場町最具代表性的立面工法。</span></li>
+          <li><b>千本格子</b><span>細密排列的木條格子窗（也稱「くぐり戸」周邊格子），兼顧室內採光通風與街道立面的隱私感，是江戶商家建築的典型語彙。</span></li>
+          <li><b>旅籠の軒灯</b><span>屋簷下懸掛的圓形紙燈籠，原是招攬投宿旅人的招牌，如今夜幕低垂時仍會點亮，成為老街最溫暖的畫面。</span></li>
+          <li><b>水場</b><span>街道上共設有六處引山泉而成的公共水場，過去供旅人飲用洗滌，現在仍可取用，也是重要的拍照節點。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUTUMN BANNER ================= -->
+<section class="banner">
+  <img src="images/toriitoge-view.jpg" alt="鳥居峠健行步道俯瞰木曾山谷紅葉雲海">
+  <div class="wrap">
+    <div class="banner-box">
+      <div class="kicker">Autumn &amp; Torii Pass</div>
+      <h2>鳥居峠：翻越難所，走進整片紅葉</h2>
+      <p>鳥居峠海拔約 1,197m，是中山道全線最險峻的難所，也是奈良井宿與鄰站藪原宿的分界。從奈良井宿口步行約 1 小時 10 分即可登頂，沿途古道保留石板與杉木林蔭，秋天登高俯瞰，滿山楓紅與雲霧交疊，是宿場町以外最值得專程走一趟的風景。峠上還有供奉水神的鳥居峠御嶽神社遙拜所，古時旅人在此祈求平安越嶺。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ATTRACTIONS ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Landmarks</div>
+      <h2>老街上不能錯過的六個地方</h2>
+      <p>上町、中町、下町三段街區裡，藏著神社、史料館與一座總檜造的太鼓橋。建議由京都側的鎮神社一路走到江戶側的木曽の大橋，順著地勢緩緩下坡。</p>
+    </div>
+    <div class="spot-grid">
+      <div class="spot">
+        <div class="spot-num">01 · 京都側入口</div>
+        <h4>鎮神社</h4>
+        <p>奈良井宿京都側（南端）的入口地標，江戶時代守護整座宿場的鎮守之神，也是逛街路線的自然起點。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">02 · 重要文化財</div>
+        <h4>中村邸</h4>
+        <p>江戶後期經營櫛（梳子）與漆器批發的商家舊宅，出梁造建築保存完整，是引發 1968 年町並保存運動的關鍵建物，現對外開放參觀。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">03 · 史料館</div>
+        <h4>上問屋史料館</h4>
+        <p>由江戶時代負責宿場公務、掌管人馬繼立的「問屋」宅邸改建，館內展示宿場文書與生活道具，可一窺當年驛站行政的實際樣貌。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">04 · 古剎</div>
+        <h4>大宝寺</h4>
+        <p>町內五座寺院之一，初夏杜鵑與秋季紅葉皆為人稱道，寺內留有相傳與傳教士相關的瑪利亞觀音像，是奈良井宿少見的隱藏故事。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">05 · 江戶側地標</div>
+        <h4>木曽の大橋</h4>
+        <p>橫跨奈良井川的總檜木造太鼓橋，弧線優美，是宿場町北端（江戶側）最具代表性的地標，秋天橋畔楓紅與河水相映，是明信片級的拍照點。</p>
+      </div>
+      <div class="spot">
+        <div class="spot-num">06 · 街道盡頭</div>
+        <h4>中山道杉並木</h4>
+        <p>宿場外圍保留的古杉林蔭道，銜接鳥居峠登山口，走完老街後不妨延伸到這裡，感受江戶旅人真正上路前的最後一段平緩步道。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENING BANNER ================= -->
+<section class="banner" style="min-height:56vh;">
+  <img src="images/evening-lanterns.jpg" alt="奈良井宿黃昏，木造老街兩側燈籠亮起">
+  <div class="wrap">
+    <div class="banner-box">
+      <div class="kicker">Golden Hour</div>
+      <h2>華燈初上，老街最安靜的時刻</h2>
+      <p>多數店家傍晚陸續打烊，遊客散去後，屋簷燈籠會逐一亮起。若安排在附近住宿一晚，能遇上白天遊客潮之外，這座宿場町最原始的樣子——只有木頭、燈光與遠山的輪廓。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRAVEL GUIDE ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Travel Guide</div>
+      <h2>奈良井宿攻略：交通・路線・時機</h2>
+      <p>整條老街禁止車輛進入，建議把車停在外圍停車場後步行遊覽，全程慢慢走大約 3～4 小時即可完整走完。</p>
+    </div>
+
+    <div class="guide-grid" style="margin-bottom:56px;">
+      <div class="guide-card">
+        <div class="icon">🚃</div>
+        <h4>電車前往</h4>
+        <p>JR 奈良井駅下車即抵老街，步行僅需 1 分鐘。</p>
+        <p>從東京出發：搭中央本線特急至 JR 塩尻駅轉乘普通車，約 25 分鐘可達奈良井駅，全程約需 2 小時 40 分以上。</p>
+        <p>從名古屋出發：搭特急約 1 小時 30 分即可抵達。</p>
+      </div>
+      <div class="guide-card">
+        <div class="icon">🚗</div>
+        <h4>自駕前往</h4>
+        <p>中央自動車道塩尻 IC 下交流道約 35 分鐘；伊那 IC 下車約 40 分鐘。</p>
+        <p>周邊設有約 220 個免費／付費停車位，老街內部全面禁止車輛進入，需步行遊覽。</p>
+      </div>
+      <div class="guide-card">
+        <div class="icon">🍁</div>
+        <h4>最佳造訪時機</h4>
+        <p>紅葉期約在 10 月中旬至 11 月中旬。奈良井宿海拔近 950m，比周邊低地更早入秋、更早轉紅，是追楓行程可以提前排入的據點。</p>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-bottom:32px;">
+      <h3 style="font-family:'Noto Serif TC',serif; font-size:1.4rem;">建議路線（步行約 3～4 小時）</h3>
+    </div>
+    <div class="route">
+      <div class="route-step">
+        <div class="route-dot">1</div>
+        <div>
+          <h4>中山道杉並木 <span class="time">出發點</span></h4>
+          <p>從外圍停車場或鳥居峠登山口方向的杉木林蔭道開始，慢慢走入宿場町範圍，作為老街之旅的序曲。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">2</div>
+        <div>
+          <h4>下町・水場 <span class="time">拍照重點</span></h4>
+          <p>從下町的水場望向仲町方向的角度，是奈良井宿最經典的宣傳照取景位置，木造町屋層層退去的透視感在此最明顯。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">3</div>
+        <div>
+          <h4>中町・上町 <span class="time">主逛街段</span></h4>
+          <p>老街商店、伴手禮店與飲食店最集中的區段，中村邸、上問屋史料館也在這一段，可依興趣安排入內參觀。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">4</div>
+        <div>
+          <h4>鎮神社 <span class="time">京都側折返點</span></h4>
+          <p>宿場京都側的入口地標，適合作為漫遊的折返或收尾點，稍作參拜後原路或改道返回。</p>
+        </div>
+      </div>
+      <div class="route-step">
+        <div class="route-dot">5</div>
+        <div>
+          <h4>木曽の大橋 <span class="time">終點</span></h4>
+          <p>沿奈良井川走回江戶側，以總檜太鼓橋作結，橋上回望整條老街與遠山，是收尾的最佳角度。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEARBY + SOUVENIR ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="intro-grid" style="align-items:start;">
+      <div>
+        <div class="kicker">Nearby</div>
+        <h2 style="margin-bottom:22px;">如果還有半天</h2>
+        <table class="info-table">
+          <tr><td>道の駅木曽ならかわ</td><td>車程約 5 分鐘，可體驗木曽漆器手作，是採買伴手禮的好去處。</td></tr>
+          <tr><td>味噌川ダム・奥木曽湖</td><td>車程約 14 分鐘，湖光山色，可安排獨木舟等水上活動。</td></tr>
+          <tr><td>鳥居峠健行</td><td>步行約 1 小時 10 分登頂，體力允許的話值得專程一趟，見上方「鳥居峠」段落。</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="kicker">Souvenir</div>
+        <h2 style="margin-bottom:22px;">帶回家的木曾谷</h2>
+        <p style="color:var(--ink-dim);">奈良井宿自江戶時代起就是木曾漆器與木工藝的集散地，中村邸的舊主人便是經營梳子批發起家，這個工藝傳統一路延續到今天的商店街上。</p>
+        <div class="chip-row">
+          <span class="chip">木曽漆器</span>
+          <span class="chip">木曽檜木工藝品</span>
+          <span class="chip">お六櫛（傳統梳子）</span>
+          <span class="chip">地酒</span>
+          <span class="chip">宿場限定手拭・周邊小物</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BRIDGE FEATURE ================= -->
+<section>
+  <div class="wrap">
+    <div class="feature">
+      <img src="images/taiko-bridge.jpg" alt="木曽の大橋，總檜造太鼓橋橫跨奈良井川，秋天楓紅倒映水面">
+      <div class="feature-body">
+        <div class="kicker">Landmark Close-up</div>
+        <h3>木曽の大橋</h3>
+        <p>橫跨奈良井川、以整根檜木彎樑架構而成的太鼓橋，是奈良井宿江戶側（北端）最醒目的地標，也是道の駅木曽平沢方向遠望老街時第一眼會看到的畫面。</p>
+        <p>橋身弧度優美，不用一根鐵釘，延續了木曾谷「木の国」的木工傳統。秋天楓紅垂落兩岸，河水清澈倒映橋身與遠山，是攝影愛好者公認奈良井宿最上鏡的角落之一。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <h3>奈良井宿</h3>
+    <p>中山道木曾十一宿之一，日本現存最長的江戶宿場町。本頁內容整理自奈良井宿観光協会、Go! NAGANO 長野県公式観光サイト、Wikipedia 等公開資料，圖片為 AI 生成之示意插畫，僅供氛圍參考，實際造訪請以現場與官方資訊為準。</p>
+    <ul class="src-list">
+      <li>資料來源：<a href="https://www.naraijuku.com/narai/history/" target="_blank" rel="noopener">奈良井宿観光協会・歴史</a></li>
+      <li>資料來源：<a href="https://www.go-nagano.net/tradition-and-culture/id21331" target="_blank" rel="noopener">Go! NAGANO 長野県公式観光サイト</a></li>
+      <li>資料來源：<a href="https://ja.wikipedia.org/wiki/%E5%A5%88%E8%89%AF%E4%BA%95%E5%AE%BF" target="_blank" rel="noopener">Wikipedia「奈良井宿」</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
