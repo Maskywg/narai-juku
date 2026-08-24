@@ -15,9 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#171110;
-    --bg-alt:#1f1815;
-    --panel:#221a17;
+    --bg:#15100f;
+    --bg-alt:rgba(255,140,60,0.05);
+    --panel:rgba(40,28,22,0.55);
     --line:rgba(232,196,150,0.14);
     --ink:#ece2d6;
     --ink-dim:#c8b8a8;
@@ -26,17 +26,26 @@
     --primary-soft:rgba(192,71,42,0.16);
     --gold:#cf9a3e;
     --gold-soft:rgba(207,154,62,0.18);
+    --moss:#5c7a3f;
     --indigo:#2c3b4a;
     --shadow: 0 20px 50px rgba(0,0,0,0.45);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background:var(--bg);
     color:var(--ink);
     font-family:"Noto Sans TC", sans-serif;
     line-height:1.85;
     font-weight:300;
+    background:
+      radial-gradient(ellipse 60% 45% at 8% 4%, rgba(192,71,42,0.34), transparent 60%),
+      radial-gradient(ellipse 55% 50% at 96% 14%, rgba(207,154,62,0.30), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 90% 46%, rgba(92,122,63,0.26), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 2% 56%, rgba(212,90,38,0.28), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 94% 82%, rgba(207,154,62,0.24), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 6% 96%, rgba(92,122,63,0.24), transparent 60%),
+      linear-gradient(180deg, #171211 0%, #15100f 40%, #120d0c 100%);
+    background-attachment:fixed;
   }
   h1,h2,h3,h4{
     font-family:"Noto Serif TC", serif;
@@ -146,6 +155,7 @@
   .stat-card{
     background:var(--panel); border:1px solid var(--line); border-radius:4px;
     padding:22px 24px;
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   }
   .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   .stat-num{
@@ -178,6 +188,8 @@
     display:grid; grid-template-columns:0.9fr 1.1fr; gap:0;
     border:1px solid var(--line); border-radius:6px; overflow:hidden;
     background:var(--panel);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
   }
   .feature img{height:100%; object-fit:cover; min-height:340px;}
   .feature-body{padding:44px 44px;}
@@ -193,7 +205,7 @@
 
   /* ---------- Attractions ---------- */
   .spot-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
-  .spot{background:var(--panel); padding:32px 30px;}
+  .spot{background:var(--panel); padding:32px 30px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);}
   .spot-num{font-family:"Noto Serif TC",serif; color:var(--primary); font-size:0.85rem; letter-spacing:0.1em; margin-bottom:10px;}
   .spot h4{font-size:1.2rem; margin-bottom:10px;}
   .spot p{color:var(--ink-dim); font-size:0.95rem;}
@@ -218,6 +230,7 @@
   .guide-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
   .guide-card{
     background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:28px 26px;
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   }
   .guide-card .icon{
     width:40px; height:40px; border-radius:50%; background:var(--primary-soft); color:var(--primary);
